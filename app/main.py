@@ -19,7 +19,9 @@ export_path = os.path.join(base_path,'export')
 
 @app.get('/')
 async def starting():
-    return upload_path,export_path
+    return {
+        "msg":"This API is for Converting your PDF to WORD or WORD to PDF !! "
+    }
 
 @app.post('/convert-pdf-docx')
 async def set_user(q:UploadFile):
